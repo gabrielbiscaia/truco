@@ -1875,5 +1875,3 @@ function finalMsg(){
     $("#msgEndGame").html(msg_end);
 
 }
-
-loadPage("logo.html","principal");
