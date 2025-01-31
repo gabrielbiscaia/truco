@@ -63,18 +63,18 @@ footer{
     background-color: rgb(0, 60, 30) ;
     border: #783c00 solid 10px;
     position: relative;
-    min-width: 800px;
+    min-width: 580px;
+    max-width: 50%;
     border-radius: 30px;
-    width: 50%;
-    height: 80%;
+    height: 68%;
     padding: 40px;
 
 }
 
 #instructions h1{
 
-    font-size: 28px;
-    text-shadow: black 2px 2px 2px;
+    font-size: 48px;
+    text-shadow: black 1px 1px 1px;
     left: 0;
     right: 0;
     display: flex;
@@ -88,17 +88,22 @@ footer{
 
     text-decoration: underline;
     font-size: 24px;
-    margin: 15px;
 
 }
 
 #instructions p{
 
-    font-size: 16px;
+    font-size: 20px;
 
 }
 
 #close{
+
+    &:hover{
+
+        cursor: pointer;
+
+    }
 
     color: white;
     position: absolute;
@@ -112,8 +117,3 @@ footer{
 
 }
 
-#close:hover{
-
-    cursor: pointer;
-
-}
