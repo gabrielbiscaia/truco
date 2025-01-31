@@ -576,7 +576,7 @@ body{
 
 #question{
 
-    color: purple;
+    color: yellow;
     font-size: 36px;
 
 }
@@ -593,7 +593,8 @@ body{
 .answerParagraph:hover{
 
     cursor: pointer;
-    border: orange dashed 3px;
+    border: yellow dashed 3px;
+    padding: 4px;
 
 }
 
