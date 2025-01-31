@@ -1,7 +1,4 @@
 //Dados para quistionário---------------------------------------------
-var titlePage = '{QUIZ-TITLE}';
-
-//Dados para quistionário---------------------------------------------
 var questions      = ['Questão 1','Questão 2'];
 
 var answers        = [['Resposta 1','Resposta 2'],['Resposta 1','Resposta 2']]; 
@@ -29,5 +26,3 @@ for(i=0; i<answerScore.length; i++){
 }
 
 var scoreResult = 0;
-
-document.title = titlePage;
