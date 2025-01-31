@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="game.css">
+    <!--Parte visual do jogo-->
+</head>
+<body>
+
+    <div id="stars">
+        
+    </div>
+
+    <div id="configButtons">
+        <img id="fullscreen" onclick="fullscreen();soundConfig();" src="img/FullScreen_Icon.png">
+        <img id="mute" onclick="muteONOF();soundConfig();" src="img/SoundOn_Icon.png">
+        <img id="backMenu" onclick="resetGame();soundConfig();" src="img/Home_Icon.png">
+        <img id="help" onclick="help('on');soundConfig();" src="img/Help_Icon.png">
+    </div>
+
+    <div id="tips">
+        <div id="tipsBoard">
+            <button id="close" onclick="help('off')">X</button>
+            <h1>Qual a ordem de força das cartas?</h1>
+            <p>A ordem de força padrão das cartas são:</p>
+            <p>4, 5, 6, 7, Q, J, K, A, 2, 3.</p>
+            <h1>O que é a carta no canto superior direito?</h1>
+            <p>Essa carta é a vira, ela é quem decide qual sera a carta mais forte da rodada, ela sempre vai fazer a carta da frente ser a mais forte, exemplo: </p>
+            <p>A vira é um "Q", logo a carta mais forte da rodada é o "J".</p>
+            <h1>Como ganhar uma rodada?</h1>
+            <p>Cada rodada é composta de no máximo 3 turnos, quem ganhar dois primeiro vence a rodada.</p>
+            <h1>Como ganha o jogo?</h1>
+            <p>Quem fazer 10 pontos primeiro ganha!</p>
+        </div>
+    </div>
+
+    <div id="interface">
+
+        <div id="botCards">
+            <img id="botCard0" src="img/cardBack.png">
+            <img id="botCard1" src="img/cardBack.png">
+            <img id="botCard2" src="img/cardBack.png">
+        </div>
+
+        <div id="scoreboard">
+            <h1 id="playerPoints">Pontos do Jogador: 0</h1>
+            <p id="playerTurnPoints1"></p>
+            <p id="playerTurnPoints2"></p>
+            <h1 id="botPoints">Pontos do Adversario: 0</h1>
+            <p id="botTurnPoints1"></p>
+            <p id="botTurnPoints2"></p>
+        </div>
+        
+        <div id="waitingForPlayer">
+            <h2>Esperando por sua jogada...</h2>
+        </div>
+
+        <div>
+            <h1 id="winOfTheRound"></h1>
+        </div>
+
+        <div>
+            <h1 id="pointOfTheTurn">Valor da Rodada: 1</h1>
+        </div>
+
+        <div>
+            <h1 id="calledTruco"></h1>
+        </div>
+
+        <div id="chose">
+            <img id="playCardButton" src="img/btn_playcard.png" onclick="soundChose();playerTurn(1);">
+            <img id="trucoButton" src="img/btn_truco.png" onclick="soundChose();playerTurn(2);">
+        </div>
+
+        <div>
+            <img id="deck" src="img/Deck.png">
+        </div>
+
+        <div id="vira">
+            <img id="viraCard" src="" alt="The Vira of the round">
+        </div>
+
+        <div id="notification">
+            <h1 id="notificationText"></h1>
+        </div>
+
+        <div id="modalBox" class="modalBox">
+            <div id="modal">
+                <h3 id="question"></h3>
+                <div id="answer">
+                </div>
+            </div>
+        </div>
+
+        <div id="modalEndQuestions">
+            <div id="endQuestions">
+                <p id="msgEndGame"></p>
+                <br><br><br><br>
+                <button id="continueGame" onclick="options('off')">Continuar jogando</button>
+                <button id="endGame"onclick="resetGame();">Encerrar o jogo</button>
+            </div>
+        </div>
+
+        <div id="modalLastQuestions">
+            <div id="lastQuestions">
+                <p>Voce terminou a partida porem não respondeu todas as questões. Voce ira responder as que faltam agora!</p>
+                <button id="next" onclick="closeLastQuestions();newQuestion();">Próximo</button>
+            </div>
+
+        </div>
+
+        <div id="cardsPlayed">
+            <img id="cardOfBotPlayed" src="">
+            <img id="cardOfPlayerPlayed" src="">
+        </div>
+
+        <div id="cardsOfPlayer">
+            <img id="card0" src="" onclick="playerPlay(0)">
+            <img id="card1" src="" onclick="playerPlay(1)">
+            <img id="card2" src="" onclick="playerPlay(2)">
+        </div>
+
+        <div>
+            <img id="hand" src="img/Hand_over.png">
+            <img id="handComplete" src="img/Hand_under.png">
+        </div>
+
+        <div id="modalEndBackground">
+            <div id="modalEnd">
+                <h1>Temos um vencedor!!!</h1>
+                <h2 id="winner"></h2>
+                <h3 id="percentCorrect">Porcentagem de acerto: </h3>
+                <button id="btnBackMenu" onclick="resetGame();">Voltar ao menu principal</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script>startGame();</script>

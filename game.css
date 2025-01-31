@@ -1,0 +1,702 @@
+body{
+
+    margin: auto;
+    background-image: url(img/BG.png);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+#mute:hover, #fullscreen:hover, #backMenu:hover, #help:hover{
+
+    cursor: pointer;
+    border: purple solid 3px;
+    border-radius: 10px;
+
+}
+
+#help{
+
+    position: absolute;
+    width: calc(30px + 2%);
+    height: auto;
+    bottom: 10px;
+    right: 310px;
+
+}
+
+#tips{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#tipsBoard{
+
+    background-color: rgb(0, 60, 30) ;
+    border: #783c00 solid 10px;
+    position: relative;
+    min-width: 800px;
+    border-radius: 30px;
+    width: 50%;
+    height: 80%;
+    padding: 40px;
+
+
+}
+
+#tips h1{
+
+    font-size: 40px;
+    text-decoration: underline;
+
+}
+
+#tips p{
+
+    font-size: 24px;
+
+}
+
+#close{
+
+    color: white;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: rgb(0, 60, 30) solid 3px;
+    background-color: #783c00;
+
+}
+
+#mute{
+
+    position: absolute;
+    width: calc(30px + 2%);
+    height: auto;
+    bottom: 10px;
+    right: 220px;
+
+}
+
+#fullscreen{
+
+    position: absolute;
+    width: calc(30px + 2%);
+    height: auto;
+    bottom: 10px;
+    right: 130px;
+    
+}
+
+#backMenu{
+
+    position: absolute;
+    width: calc(30px + 2%);
+    height: auto;
+    bottom: 10px;
+    right: 40px;
+
+}
+
+#botCard0, #botCard1, #botCard2{
+
+    height: calc(100px + 20%);
+    width: auto;
+    position: absolute;
+
+}
+
+#botCard0{
+
+    transform: rotate(20deg);
+    top: -95px;
+    left: 41%;
+
+}
+
+#botCard1{
+
+    top: -75px;
+    left: 45%;
+
+}
+
+#botCard2{
+
+    transform: rotate(-20deg);
+    top: -95px;
+    left: 49%;
+
+}
+
+#playerPoints{
+
+    background-color: #5d9b9b;
+    position: absolute;
+    left: 20px;
+    top : -10px;
+
+}
+
+#botPoints{
+
+    background-color: #cc6961;
+    position: absolute;
+    right: 20px;
+    top: -10px;
+
+}
+
+#playerTurnPoints1, #botTurnPoints1, #playerTurnPoints2, #botTurnPoints2{
+
+    border-radius: 50%;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 1.5px solid #000000;
+
+}
+
+#playerTurnPoints1{
+
+    background-color: #5d9b9b;
+    top: 50px;
+    left: 25px;
+
+}
+
+#playerTurnPoints2{
+
+    background-color: #5d9b9b;
+    top: 50px;
+    left: 60px;
+
+
+}
+
+#botTurnPoints1{
+
+    background-color: #cc6961;
+    top: 50px;
+    right: 25px;
+
+}
+
+#botTurnPoints2{
+
+    background-color: #cc6961;
+    top: 50px;
+    right: 60px;
+
+}
+
+#botPoints, #playerPoints{
+
+    font-size: calc(20px + 35%);
+    border: black solid 3px;
+    width: 400px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px black;
+
+}
+
+#waitingForPlayer{
+
+    color: #D3D3D3;
+    position: absolute;
+    display: flex;
+    border: #A9A9A9 solid 3px;
+    padding: 0px 10px;
+    background-color: #383838;
+    top: 17%;
+    left: 2%;
+
+}
+
+#winOfTheRound{
+
+    color: white;
+    text-shadow: #000000 1px 1px 1px;
+    font-size: 36px;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    bottom: 30px;
+    width: 300px;
+    height: auto;
+
+}
+
+#pointOfTheTurn{
+
+    font-size: 38px;
+    z-index: 1600;
+    background-color: #222222;
+    border: rgb(150, 75, 50) solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: auto;
+    width: auto;
+    bottom: -20px;
+    margin: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 50px 10px 50px;
+
+}
+
+#calledTruco{
+
+    position: absolute;
+    top: 0;
+    right: 30%;
+    left: 30%;
+    padding: 10px;
+    border: white solid 2px;
+    background-color: black;
+
+}
+
+#viraCard{
+
+    position: absolute;
+    top: 140px;
+    right: 150px;
+    height: calc(50px + 25%);
+    width: auto;
+    border: #000000 dashed 5px;
+    border-radius: 20px;
+
+}
+
+#deck{
+
+    position: absolute;
+    height: calc(50px + 25%);
+    top: 140px;
+    right: 150px;
+    transform: rotate(45deg);
+    z-index: 1100;
+
+}
+
+#notification{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#notificationText{
+
+    position: absolute;
+    top:30%;
+    left: 5%;
+    right: 5%;
+    bottom: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 80px;
+    border-radius: 300px;
+    
+}
+
+.modalBox{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#modal{
+
+    background-color: gray;
+    width: 60%;
+    height: 60%;
+    min-width: 500px;
+    padding: 40px;
+    border: 10px solid #783c00;
+    border-radius: 50px;
+    position: relative;
+
+}
+
+/*here, it's when you finish the game but don't finished all the questions*/
+
+#modalLastQuestions{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#lastQuestions{
+
+    position: relative;
+    width: 50%;
+    height: 50%;
+    min-width: 400px;
+    padding: 30px;
+    background-color: gray;
+    border-radius: 30px;  
+
+}
+
+#lastQuestions p{
+
+    font-size: 36px;
+    text-shadow: black 1px 1px 2px;
+
+}
+
+#next{
+
+    background-color: #5f9ea0;
+    padding: 10px;
+    font-size: 44px;
+
+}
+
+/*here, its when you already answer all questions*/
+
+#modalEndQuestions{ 
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#endQuestions{
+
+    position: relative;
+    width: 50%;
+    height: 50%;
+    min-width: 400px;
+    padding: 30px;
+    background-color: gray;
+    border-radius: 30px;
+
+}
+
+#endQuestions p{
+
+    font-size: 26px;
+    text-shadow: black 1px 1px 2px;
+
+}
+
+#continueGame, #endGame{
+
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    
+
+}
+
+#continueGame{
+
+    background-color: #5f9ea0;
+
+}
+
+#endGame{
+
+    background-color: #ca7e27;
+
+}
+
+#cardOfBotPlayed, #cardOfPlayerPlayed{
+
+    height: calc(70px + 20%);
+    width: auto;
+    position: absolute;
+
+}
+
+#cardOfBotPlayed{
+
+    right: 38%;
+    bottom: 42%;
+
+}
+
+#cardOfPlayerPlayed{
+
+    left: 38%;
+    bottom: 42%;
+
+}
+
+
+#playCardButton, #trucoButton{
+
+    width: auto;
+    height: calc(40px + 5%);
+    position: absolute;
+    right: 70px;
+    z-index: 1500;
+
+}
+
+#playCardButton{
+
+    bottom: 30%;
+
+}
+
+#trucoButton{
+
+    bottom: 15%;
+
+}
+
+#playCardButton:hover, #trucoButton:hover{
+
+    cursor: pointer;
+    border: purple solid 5px;
+    border-radius: 20px;
+
+}
+
+#card0, #card1, #card2{
+
+    height: calc(80px + 20%);
+    width: auto;
+    border: black solid 1px;
+    border-radius: 15px;
+
+}
+
+#card0:hover, #card1:hover, #card2:hover{
+
+    cursor: pointer;
+    border: purple solid 5px;
+
+}
+
+#card0{
+
+    transform: rotate(-20deg);
+    position: absolute;
+    z-index: 1100;
+    left: 230px;
+    bottom: 190px;
+
+}
+
+#card1{
+
+    transform: rotate(0deg);
+    position: absolute;
+    z-index: 1200;
+    left: 270px;
+    bottom: 200px;
+
+}
+
+#card2{
+
+    transform: rotate(20deg);
+    position: absolute;
+    z-index: 1300;
+    left: 310px;
+    bottom: 190px;
+
+}
+
+#hand{
+
+    position: absolute;
+    z-index: 1400;
+    bottom: -80px;
+    left: 183px;
+
+}
+
+#handComplete{
+
+    position: absolute;
+    z-index: 900;
+    left: 100px;
+    bottom: -90px;
+
+}
+
+#question{
+
+    color: purple;
+    font-size: 36px;
+
+}
+
+.answerParagraph{
+
+    display:  inline;
+    position: static;
+    display: block;
+    text-align: justify;
+
+}
+
+.answerParagraph:hover{
+
+    cursor: pointer;
+    border: orange dashed 3px;
+
+}
+
+#answer0, #answer1, #answer2, #answer3, #answer4{
+
+    position: static;
+    left: 0;
+
+} 
+
+#modalEndBackground{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#modalEnd{
+
+    background-color: #808080;
+    position: relative;
+    min-width: 800px;
+    border-radius: 50px;
+    width: 70%;
+    height: 70%;
+
+}
+
+#modalEnd h1{
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30px;
+    font-size: 56px;
+    text-shadow: black 2px 2px;
+
+}
+
+#winner{
+
+    font-size: 48px;
+    top: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-shadow: black 2px 2px 3px;
+
+}
+
+#percentCorrect{
+
+    font-size: 24px;
+    text-shadow: #000000 1px 1px 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+
+}
+
+#btnPlayAgain, #btnBackMenu{
+
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    font-size: 100%;
+    bottom: 5%;
+    border-radius: 10px;
+
+}
+
+#btnPlayAgain:hover, #btnBackMenu:hover{
+
+    cursor: pointer;
+
+}
+
+#btnPlayAgain{
+
+    background-color: cadetblue;
+    right: 220px;
+
+}
+
+#btnBackMenu{
+
+    background-color: chocolate;
+    right: 50px;
+
+}
+
+#starts{
+
+    z-index: 2000;
+
+}

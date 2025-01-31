@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Truco Educacional</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Gabriel">
+    <meta name="description" content="educational truco game">
+    <meta name="keywords" content="truco, game, educational">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="modal/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="modal/jquery.modal.min.css">
+    <script src="lottie.js"></script>
+    
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+    <div id="principal">
+   
+    </div>
+
+    <div id="howToPlay">
+        <div id="instructions">
+            <button id="close" onclick="modalHowToPlay('off')">X</button>
+            <h1>Como jogar?</h1>
+            <h2>Ordem de força das cartas (do menor para maior):</h2>
+            <p>4, 5, 6, 7, Q, J, K, A, 2, 3.</p>
+            <h2>Noções básicas</h2>
+            <p>A cada rodada cada jogador recebe 3 cartas.</p>
+            <p>Antes do começo de cada rodada, o baralho vira uma carta, a carta que for virada vai ter sua carta posterior como a mais forte da rodada, conhecida como manilha, por <b>exemplo</b>:</p>
+            <p>Começo de jogo vira um “7” como vira de mesa, naquela rodada (dentro dos 3 turnos) o “Q” vai ser a carta mais forte do jogo.</p>
+            <h2>O que são Turnos?</h2>
+            <p>A cada turno voce pode decidir entre <b>jogar</b> uma carta, ou <b>pedir truco</b>.</p>
+            <p> Caso peça truco, tera que responder uma pergunta, caso acerte a mesma a rodada passa a valer mais pontos.</p>
+            <h2>O que são Rodadas?</h2>
+            <p>Cada rodada são compostas de 3 turnos(no máximo).</p>
+            <p>Vence quem chegar a 10 pontos primeiro.</p>
+
+        </div>
+    </div>
+
+    <audio id="AnswerAudio">
+        <source src="audio/Button/buttonAnswer.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="ChoseAudio">
+        <source src="audio/Button/buttonChose.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="ConfigAudio">
+        <source src="audio/Button/buttonConfig.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="shuffleAudio">
+        <source src="audio/Cards_Shuffle_Deck_of_Cards_OCM-0036-001.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="winAudio">
+        <source src="audio/EndGame/Victory.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="defeatAudio">
+        <source src="audio/EndGame/11593-Classic-brass-defeat-fanfare.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="playingCard0">
+        <source src="audio/PlayingCard/Playing-Cards-01.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="playingCard1">
+        <source src="audio/PlayingCard/Playing-Cards-02.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="playingCard2">
+        <source src="audio/PlayingCard/Playing-Cards-05.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="playingCard3">
+        <source src="audio/PlayingCard/Playing-Cards-06.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="playingCard4">
+        <source src="audio/PlayingCard/Playing-Cards-07.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="playingCard5">
+        <source src="audio/PlayingCard/Playing-Cards-08.ogg" type="audio/ogg">
+    </audio>
+
+</body>
+</html>
+<script src="dataG.js"></script>
+<script src="action.js"></script>
+

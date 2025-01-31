@@ -1,0 +1,119 @@
+body{
+    background-color: rgb(0, 60, 30);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin: 0;
+}
+
+#principal{
+    text-align: center;
+}
+
+#menu{
+    position: relative;
+    top: 25px;
+    text-shadow: 3px 3px 3px black;
+    border-bottom: gray solid 3px; 
+    padding: 0 10px;
+    margin: 0 40%;
+    font-size: 5vw;
+}
+
+#box h2{
+    border: white solid 2px;
+    position: relative;
+    padding: 15px;
+    margin: 30px 40%;
+    font-size: 2vw;
+    top: 50px;
+    
+}
+
+#box h2:hover{
+    background: green;
+    cursor: pointer;
+}
+
+footer{
+    background-color: rgb(0, 30, 2);
+    text-shadow: 1px 1px 2px #333;
+    position: absolute;
+    padding-top: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+#howToPlay{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#instructions{
+
+    background-color: rgb(0, 60, 30) ;
+    border: #783c00 solid 10px;
+    position: relative;
+    min-width: 800px;
+    border-radius: 30px;
+    width: 50%;
+    height: 80%;
+    padding: 40px;
+
+}
+
+#instructions h1{
+
+    font-size: 28px;
+    text-shadow: black 2px 2px 2px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0;
+
+}
+
+#instructions h2{
+
+    text-decoration: underline;
+    font-size: 24px;
+    margin: 15px;
+
+}
+
+#instructions p{
+
+    font-size: 16px;
+
+}
+
+#close{
+
+    color: white;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: rgb(0, 60, 30) solid 3px;
+    background-color: #783c00;
+
+}
+
+#close:hover{
+
+    cursor: pointer;
+
+}
