@@ -1,5 +1,7 @@
 # Truco
 
+![image](https://github.com/user-attachments/assets/4ddec4cb-9dc7-414b-88fd-cee37705fa8b)
+
 ## 🔗 Link
 https://truco.gabrielbiscaia.com.br/
 
